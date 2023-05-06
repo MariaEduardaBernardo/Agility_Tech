@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/Sing_in.css">
+    <link rel="stylesheet" href="/CSS/Pag_inicial.css">
+    <link rel="import" href="/Cadastro.java">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="cabecalho">
+            <a href="/HTML/Pag_inicial.html"><img src="/IMG/logo.png" alt="Logo da aplicacao"></a>
+        </div>
+    </header>
+
+    <form action="/HTML/User.html" id="FormCadastro">
+        <h1>Cadastro</h1>
+
+        <label for="username">Nome</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password" required>
+
+        <p id="password-message"></p>
+
+        <button type="submit" id="submit" disabled>Cadastrar</button>
+    </form>
+
+    </body>
+</html>
+
+<script>
+function isStrongPassword(password) {
+const regex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_+~`\-={}[\]:";'<>?,./]).{8,}$/;
+return regex.test(password);
+}
+
+const passwordInput = document.querySelector('#password');
+const submitButton = document.querySelector('#submit');
+const messageElement = document.querySelector('#password-message');
+
+passwordInput.addEventListener('input', (event) => {
+const password = event.target.value;
+const isStrong = isStrongPassword(password);
+messageElement.textContent = isStrong ? 'Senha forte' : 'A senha deve ter pelo menos 8 caracteres, uma letra maiúscula, uma letra minúscula, um número e um caractere especial';
+submitButton.disabled = !isStrong;
+});
+
+</script>

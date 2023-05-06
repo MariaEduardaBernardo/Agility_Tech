@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/CSS/Pag_inicial.css">
+        <title>Perfil</title>
+    </head>
+
+    <body>
+        <header>
+            <div class="cabecalho">
+                <a href="/HTML/Pag_inicial.html"><img src="/IMG/logo.png" alt="Logo da aplicacao"></a>
+            </div>
+        </header>
+        
+        <!--Conectar com o banco de dados para ter as informações corretas do usuario-->
+        <div id="user">
+            <img src="/IMG/img.jpg" alt="Foto de perfil">
+            <h1>Nome do usuário</h1>
+        </div>
+
+        <!--Informações pessoais-->
+        <section class="bloco">
+            <h2>Sobre</h2>
+            <p>Nome: </p>
+            <p>Idade: </p>
+            <p>Como posso ajudar: </p>
+            <p><a href="">Atualizar dados</a></p>
+        </section>
+
+        <!--ONGs curtidas (se for ter)-->
+        <section class="bloco">
+            <h2>ONGs que você cutiu</h2>
+        </section>
+
+        <!--Ong que deu meet-->
+        <section class="bloco">
+            <h2>ONG que mais combinou com você</h2>
+            <!--Caso não tenha feito ainda, aparecer a escolha-->
+            <button onclick="openModal()">Fazer Teste</button>
+
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <p>Escolha as opções de como você pode ajudar</p>
+
+                    <ul class="checklist">
+                        <li><input type="checkbox" id="op1" name="op1" value="op1"><label for="op1">Doação de NOME</label></li>    
+                        <li><input type="checkbox" id="op2" name="op2" value="op2"><label for="op2">Doação de NOME</label></li>
+                        <li><input type="checkbox" id="op3" name="op3" value="op3"><label for="op3">Doação de NOME</label></li>
+
+                        <li><input type="checkbox" id="op4" name="op4" value="op4"><label for="op4">Doação de NOME</label></li>    
+                        <li><input type="checkbox" id="op5" name="op5" value="op5"><label for="op5">Doação de NOME</label></li>
+                        <li><input type="checkbox" id="op6" name="op6" value="op6"><label for="op6">Doação de NOME</label></li>
+
+                        <li><input type="checkbox" id="op7" name="op7" value="op7"><label for="op7">Doação de NOME</label></li>    
+                        <li><input type="checkbox" id="op8" name="op8" value="op8"><label for="op8">Doação de NOME</label></li>
+                        <li><input type="checkbox" id="op9" name="op9" value="op9"><label for="op9">Doação de NOME</label></li>
+                    </ul>
+                    <button>Salvar escolha</button>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="rodape">
+                <p>&copy; 2023 - Todos os direitos reservados</p>
+            </div>
+        </footer>
+
+        <script src="/JS/script.js"></script>
+    </body>
+</html>
