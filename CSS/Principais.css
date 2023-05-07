@@ -2,7 +2,6 @@ body{
     background-color: #D6E1E7;
 }
 
-/*Cabeçalho e Rodapé*/
 header {
 background-color: #243851;
 padding: 8px;
@@ -15,6 +14,13 @@ margin: 0 auto;
 
 .cabecalho img{
 height: 3.5em;
+}
+
+#img_user{
+    float: right;
+    margin: 1em;
+    height: 2em;
+    border-radius: 360px;
 }
 
 @media screen and (max-width: 768px) {
