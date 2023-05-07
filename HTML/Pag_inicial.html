@@ -5,8 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/CSS/Pag_inicial.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="/CSS/Principais.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Slick -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+
+    <title>Página Inicial</title>
+    
 </head>
+
 <body>
     <header>
         <div class="cabecalho">
@@ -14,74 +25,109 @@
         </div>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="#">Menu 1</a></li>
-            <li><a href="#">Menu 2</a></li>
-            <li><a href="#">Menu 3</a></li>
-            <li><a href="#">Menu 4</a></li>
-        </ul>
-    </nav>
+    <div>
+      <p>Slide falando sobre ONG</p>
+    </div>
+
+    <div class="Ex_ONGs">
+
+      <div class="Ex_ONGs-item">
+        <img src="/IMG/Icone_HB.png" alt="Icone Hamburgada do bem">
+        <h4>Hamburgada do bem</h4>
+        <p>Fundada em 2015, os criadores são Erick Watanabe, Tácio Watanabe e Thiago Salles. Realiza eventos mensais e atua no trabalho continuo com crianças e jovens de comunidades. Além de contar com outros projetos como hamburgada na rua que atende pessoas em situação de rua e a fantástica fábrica de sonhos onde os voluntários podem adotar um sonho de uma criança(por exemplo, brinquedos).</p>
+      </div>
+    
+      <div class="Ex_ONGs-item">
+        <img src="/IMG/Icone_HB.png" alt="">
+        <h4>Instituto Mara Gabrilli</h4>
+        <p>Instituto Mara Gabrilli Fundado em 1997, pela publicitária e psicóloga Mara Gabrilli. Seus objetivos são promover às pesquisas para a cura de paralisias e apoio ao esporte paradesporto. O instituto trabalha com projetos que ajudam pessoas a resgatarem a autonomia e a dignidade, além de oferecer suporte para que elas conheçam os seus direitos e tenham acesso a eles. Esse suporte acontece através de ações como o Projeto Próximo Passo, o Projeto Cadê Você? e o Guias e Publicações.</p>
+      </div>
+      
+      <div class="Ex_ONGs-item">
+        <img src="/IMG/Icone_HB.png" alt="">
+        <h4>Themis Furigo</h4>
+        <p>O Instituto Themis Furigo foi fundado em 05 de novembro de 2018 pela Themis Furigo dos Santos. A ONG tem como objetivo dar suporte a pessoas, promover a prosperidade e o bem-estar para todos, proteger o meio ambiente e contribuir com o desenvolvimento sustentável, apoiar iniciativas de transformar o lixo em energia elétrica, eliminando aterros sanitários das cidades.</p>
+      </div>
+      
+      <div class="Ex_ONGs-item">
+        <img src="/IMG/Icone_HB.png" alt="">
+        <h4>Hamburgada do bem</h4>
+        <p>SOBRE</p>
+      </div>
+      
+      <div class="Ex_ONGs-item">
+        <img src="/IMG/Icone_HB.png" alt="">
+        <h4>Hamburgada do bem</h4>
+        <p>SOBRE</p>
+      </div>
+      
+      <div class="Ex_ONGs-item">
+        <img src="/IMG/Icone_HB.png" alt="">
+        <h4>Hamburgada do bem</h4>
+        <p>SOBRE</p>
+      </div>
+    </div>
+
+    <div class="Test_pagInicial">
+        <div class="text" id="Test_pagInicial">
+          <h3>Ainda tem dúvida para quem doar? Realize o teste de compatibilidade e veja qual ONG combina mais com você.</h3>
+          <button id="escolha_help" onclick="openModal()">Fazer Teste</button>
+        </div>
+        <div class="image">
+          <img src="/IMG/logo.png" alt="">
+        </div>
+      </div>
+      
+      <div id="myModal" class="modal">
+          <div class="modal-content">
+              <span class="close" onclick="closeModal()">&times;</span>
+              <p>Escolha as opções de como você pode ajudar</p>
+
+              <ul class="checklist">
+                  <li><input type="checkbox" id="op1" name="op1" value="op1"><label for="op1">Doação de NOME</label></li>    
+                  <li><input type="checkbox" id="op2" name="op2" value="op2"><label for="op2">Doação de NOME</label></li>
+                  <li><input type="checkbox" id="op3" name="op3" value="op3"><label for="op3">Doação de NOME</label></li>
+
+                  <li><input type="checkbox" id="op4" name="op4" value="op4"><label for="op4">Doação de NOME</label></li>    
+                  <li><input type="checkbox" id="op5" name="op5" value="op5"><label for="op5">Doação de NOME</label></li>
+                  <li><input type="checkbox" id="op6" name="op6" value="op6"><label for="op6">Doação de NOME</label></li>
+
+                  <li><input type="checkbox" id="op7" name="op7" value="op7"><label for="op7">Doação de NOME</label></li>    
+                  <li><input type="checkbox" id="op8" name="op8" value="op8"><label for="op8">Doação de NOME</label></li>
+                  <li><input type="checkbox" id="op9" name="op9" value="op9"><label for="op9">Doação de NOME</label></li>
+              </ul>
+              <button id="escolha_help">Salvar escolha</button>
+          </div>
+      </div>
+    </div>
 
     <div>
-      <h1>Olá mundo!</h1>
-      <p>Conteudo</p>
-    </div>
-    
-    <div class="test">
-      <div class="text-block">
-        <h2>Como doar</h2>
-        <p>1</p>
-        <p>2</p>
-        <p>3</p>
+      <div class="contact-form">
+        <h2>Entre em contato conosco</h2>
+        <form>
+          <label for="name">Nome:</label>
+          <input type="text" id="name" name="name" required>
+      
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" required>
+      
+          <label for="subject">Assunto:</label>
+          <input type="text" id="subject" name="subject" required>
+      
+          <label for="message">Mensagem:</label>
+          <textarea id="message" name="message" required></textarea>
+      
+          <button type="submit">Enviar</button>
+        </form>
       </div>
-    
-      <div class="text-block1">
-        <h2>Como doar</h2>
-      </div>
     </div>
-
-    
-    
-    <style>
-
-.test {
-  display: flex;
-  height: 15em;
-  justify-content: center;
-  align-items: center;
-}
-
-.test {
-  display: flex;
-  height: 15em;
-  justify-content: center;
-}
-
-    
-    .text-block {
-      background-color: #acacac63;
-      border-radius: 10px;
-      padding: 10px;
-      width: 50%;
-      height: 10em;
-      margin-right: 10px; /* Adiciona margem à direita para criar espaço */
-    }
-    
-    .text-block1 {
-      background-color: #6464642f;
-      border-radius: 10px;
-      padding: 10px;
-      width: 30%;
-      height: 10em;
-    }
-    </style>
-    
 
     <footer>
         <div class="rodape">
             <p>&copy; 2023 - Todos os direitos reservados</p>
         </div>
     </footer>
+
+    <script src="/JS/script.js"></script>
 </body>
 </html>
