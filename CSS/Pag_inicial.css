@@ -219,6 +219,50 @@ main {
     margin-left: 1em;
 }
 
+.Test_pagInicial {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text {
+    margin: auto;
+}
+
+.image img{
+    width: 80%;
+}
+
+.Ex_ONGs {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.Ex_ONGs-item h4{
+    text-align: center;
+}
+
+.Ex_ONGs-item p{
+    text-align: justify;
+    margin-left: 0.8em;
+    margin-right: 0.8em;
+}
+
+.Ex_ONGs img{
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5%;
+    height: 340px;
+}
+
+.Ex_ONGs-item {
+    width: 33.33%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+/*Formulario de contato*/
 .contact-form {
     width: 80%;
     margin: 0 auto;
@@ -263,45 +307,12 @@ main {
     background-color: #16a085;
 }
 
-.Test_pagInicial {
+#image1, #image2{
+    width: 25%; 
+    border-radius: 360px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
 }
-
-.text {
-    margin: auto;
-}
-
-.image img{
-    width: 80%;
-}
-
-.Ex_ONGs {
-    width: 90%;
-    margin: 0 auto;
-}
-
-.Ex_ONGs-item h4{
-    text-align: center;
-}
-
-.Ex_ONGs-item p{
-    text-align: justify;
-    margin-left: 0.8em;
-    margin-right: 0.8em;
-}
-
-.Ex_ONGs img{
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 5%;
-    height: 340px;
-}
-
-.Ex_ONGs-item {
-    width: 33.33%;
-    box-sizing: border-box;
-    padding: 10px;
+    
+.button-container {
+    display: flex;
 }
