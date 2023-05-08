@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/CSS/Pag_inicial.css">
+    <link rel="stylesheet" href="/CSS/Elementos.css">
     <link rel="stylesheet" href="/CSS/Principais.css">
+    <link rel="stylesheet" href="/CSS/Carousel.scss">
+    <link rel="stylesheet" href="/CSS/Carousel.css">
+    <link rel="icon" type="imagem/png" href="https://uploaddeimagens.com.br/images/004/457/464/full/imagem_2023-05-08_113702062.png?1683556624"/>
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Slick -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css"/>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
 
@@ -21,14 +24,83 @@
 <body>
     <header>
         <div class="cabecalho">
-          <a href="/HTML/Pag_inicial.html"><img src="/IMG/logo.png" alt="Logo da aplicacao"></a>
+          <a href="/HTML/Pag_inicial.html"><img src="https://uploaddeimagens.com.br/images/004/457/458/thumb/imagem_2023-05-08_113419244.png?1683556462" alt="Logo da aplicacao"></a>
           <a href="/HTML/User.html"><img id="img_user" src="https://uploaddeimagens.com.br/images/004/456/698/thumb/imagem_2023-05-07_132335595.png?1683476619" alt="Icone do usuario"></a>
         </div>
     </header>
 
-    <div id="testeIMG">
-      <p>Slide falando sobre ONG</p>
-    </div>
+    <div class="carousel">
+      <div class="progress-bar progress-bar--primary hide-on-desktop">
+        <div class="progress-bar__fill"></div>
+      </div>
+
+      <div class="main-post-wrapper">
+        <div class="slides">
+          
+          <article class="main-post main-post--active">
+            <div class="main-post__image">
+              <img src="https://img.freepik.com/vetores-gratis/pequenos-funcionarios-de-escritorio-trabalhando-em-maos-abstratas-e-carinhosas_74855-19924.jpg?w=740&t=st=1683550659~exp=1683551259~hmac=3105b41de750814bd6b2ef15b4256016b8310f70206a5172c6c1dd0ef4e290d1" alt="New McLaren wind tunnel 'critical' to future performance, says Tech Director Key" />
+            </div>
+            <div class="main-post__content">
+              <div class="main-post__tag-wrapper">
+                <span class="main-post__tag">O que é uma ONG?</span>
+              </div>
+              <h1 class="main-post__title">ONG nada mais é que, uma abreviação de Organização não governamental, que têm por finalidade a promoção de assistência social, cultural, defesa de interesses de classe, filantropia.</h1>
+            </div>
+          </article>
+
+          <article class="main-post main-post--not-active">
+            <div class="main-post__image">
+              <img src="https://img.freepik.com/vetores-gratis/pessoas-que-transportam-doacao-e-caridade-relacionados-com-icones_53876-43091.jpg?w=740&t=st=1683550745~exp=1683551345~hmac=b0c178fbdbe2dbc89aac91aff3c2107506ed33bae5b4038838b8a0794a7565f4" alt="What To Watch For in the 2019 Hungarian Grand Prix" />
+            </div>
+            <div class="main-post__content">
+              <div class="main-post__tag-wrapper">
+                <span class="main-post__tag">O que elas fazem?</span>
+              </div>
+              <h1 class="main-post__title">Esse tipo de organização tem como principal objetivo ceder seu tempo em prol do bem alheio. Por isso, tais, devem buscar formas de se organizarem e gerenciarem tudo que ganham e doam de formas mais eficientes e ágeis.</h1>
+            </div>
+          </article>
+
+          <article class="main-post main-post--not-active">
+            <div class="main-post__image">
+              <img src="https://img.freepik.com/vetores-gratis/voluntarios-com-ilustracao-de-icones-de-caridade_53876-43180.jpg?t=st=1683550847~exp=1683551447~hmac=f36e27f000c890f2bf98bd99834ea6a3353efc6e416703da963041b65ed4e164" alt="Hamilton wants harder championship fight from Leclerc and
+            Verstappen"/>
+            </div>
+            <div class="main-post__content">
+              <div class="main-post__tag-wrapper">
+                <span class="main-post__tag">Formas de ajudar</span>
+              </div>
+              <h1 class="main-post__title">Ajudar uma ONG não se limita apenas em contribuições em dinheiro, há diversas outras formas de ajudar como: trabalho voluntário, divulgar as campanhas da instituição, recolher alimentos, roupas e outros mantimentos.</h1>
+            </div>
+          </article>
+        </div>
+      </div>
+      
+      <div class="posts-wrapper hide-on-mobile">
+      
+        <article class="post post--active">
+          <div class="progress-bar">
+            <div class="progress-bar__fill"></div>
+            <br><span> O que é uma ONG?</span>
+          </div>
+        </article>
+    
+        <article class="post">
+          <div class="progress-bar">
+            <div class="progress-bar__fill"></div>
+            <br><span> O que elas fazem?</span>
+          </div>
+        </article>
+  
+        <article class="post">
+          <div class="progress-bar">
+            <div class="progress-bar__fill"></div>
+            <br><span> Formas de ajudar</span>
+          </div>
+        </article>
+          
+      </div>
+    </div><br>
 
     <div class="Ex_ONGs">
 
@@ -53,12 +125,12 @@
       <div class="Ex_ONGs-item">
         <img src="https://uploaddeimagens.com.br/images/004/456/688/thumb/imagem_2023-05-07_131242532.png?1683475967" alt="Icone ONG Caminha Down">
         <h4>Caminha Down</h4>
-        <p>SOBRE</p>
+        <p>Surgiu em 2015, e foi idealizado por Rosna Bignami. É um evento na cidade de São Paulo em comemoração ao Dia Internacional da Síndrome de Down. Esse evento foi inspirado em diversas caminhadas que ocorrem ao redor do mundo em defesa dos direitos das pessoas com síndrome de Down e demais deficiências. </p>
       </div>
       
       <div class="Ex_ONGs-item">
-        <img src="https://uploaddeimagens.com.br/images/004/456/688/thumb/imagem_2023-05-07_131242532.png?1683475967" alt="" height="30%">
-        <h4>Hamburgada do bem</h4>
+        <img src="https://uploaddeimagens.com.br/images/004/457/425/full/imagem_2023-05-08_111527894.png?1683555347" alt="Icone ONG a gente ajuda" height="30%">
+        <h4>A gente ajuda</h4>
         <p>SOBRE</p>
       </div>
       
