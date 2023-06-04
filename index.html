@@ -185,7 +185,7 @@
 
     </div>
 
-    <div class="Test_pagInicial">
+    <div class="Test_pagInicial hidden">
         <div class="text" id="Test_pagInicial">
           <p>Se você ainda está indeciso sobre qual ONG doar, não se preocupe. Nós podemos te ajudar! Clique no botão abaixo para responder um breve questionário de opções (checklist) que nos ajudadrá a entender suas preferências e valores.</p>
           <p>Com base nas suas respostas, recomendaremos algumas ONGs que se encaixam no seu perfil e que fazem um trabalho significativo na área em que você está interessado em ajudar.</p>
@@ -256,6 +256,7 @@
     </footer>
 
     <script src="/JS/script.js"></script>
+    <script src="/JS/CadUser.js"></script>
 </body>
 </html>
 
@@ -268,3 +269,20 @@
   </script>
 
 <style>body{background-color: #D6E1E7;}</style>
+
+<script>
+  // Supondo que você tenha uma variável chamada "usuarioAutenticado" que indica se o usuário está autenticado
+  var auth = true; // substitua isso com a lógica real de autenticação
+
+  // Verifique se o usuário está autenticado e mostre o elemento correspondente
+  if (auth) {
+    var index = document.querySelector('.Index');
+    index.classList.remove('hidden');
+  }
+</script>
+
+<style>
+  .hidden {
+    display: none;
+  }
+</style>
