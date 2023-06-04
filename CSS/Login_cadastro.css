@@ -1,24 +1,8 @@
-.container button:hover:not([disabled]) {
-    background-color: #4827a175;
-}
-
-.container button:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-}
-
-#password-message {
-    font-size: 14px;
-    color: #666;
-    margin-top: -10px;
-    margin-bottom: 20px;
-}
-
 /*Bloco*/
 
 .container h1 {
 	font-weight: bold;
-	margin: 0;
+	margin: 2em 0 0 0;
 }
 
 .container p {
@@ -54,7 +38,7 @@
 	background-color: #f2eee3;
 	border: none;
 	padding: 12px 15px;
-	margin: 8px 0;
+	margin: 0 0 0 0;
 	width: 100%;
 }
 .ontainer button:active {
@@ -86,7 +70,7 @@
 	background-color: #f2eee3;
 	border: none;
 	padding: 12px 15px;
-	margin: 8px 0;
+	margin: 0;
 	width: 100%;
 }
 
