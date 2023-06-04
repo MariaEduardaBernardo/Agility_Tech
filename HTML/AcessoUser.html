@@ -10,10 +10,8 @@
 		<link rel="import" href="/Cadastro.java">
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 
-		<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
-
-		<link rel="import" href="import { initializeApp } from firebase/app">
-		<link rel="import" href="import { getAnalytics } from firebase/analytics">
+		<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
 
 		<link rel="icon" type="imagem/png" href="https://uploaddeimagens.com.br/images/004/457/464/full/imagem_2023-05-08_113702062.png?1683556624"/>
 		<title>Página de cadastro/login</title>
@@ -36,24 +34,25 @@
 
     <div class="container" id="container">
         <div class="form-container sign-up-container">
-            <form action="/HTML/User.html" id="FormCadastro">
+            <form id="clearFrom">
                 <h1>Realize seu cadastro</h1>
 				<span>É uma ONG? <a href="/HTML/AcessoONG.html">Entrar como ONG</a></span><br>
 
                 <label for="username">Nome</label>
-                <input type="text" id="username" name="username" required>
+                <input type="text" id="idName" name="userName" required>
 
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="idEmail" name="userEmail" required>
 
                 <label for="password">Senha:</label>
-                <input type="password" id="password" name="password" required>
+                <input type="password" id="idPw" name="password" required>
 
                 <p id="password-message"></p>
-                <button type="submit" id="submit" disabled>Cadastrar</button>
+                <button type="submit" id="submit">Cadastrar</button>
             </form>
         </div>
 
+		<!--Login do usuário-->
 		<div class="form-container sign-in-container">
             <form action="/HTML/User.html" id="FormCadastro">
                 <h1>Login de Usuário</h1>
@@ -64,8 +63,10 @@
 
                 <label for="password">Senha:</label>
                 <input type="password" id="password" name="password" required>
+
+				<p id="error-message" style="color: red;"></p>
 				<br>
-                <button type="submit" id="submit">Entrar</button>
+				<button type="submit" id="login">Entrar</button>
             </form>
         </div>
 
@@ -87,5 +88,6 @@
     </div>
 	<style>body{background-color: #D6E1E7;}</style>
 	<script src="/JS/Cad_log.js"></script>
+	<script src="/app.js"></script>
     </body>
 </html>
