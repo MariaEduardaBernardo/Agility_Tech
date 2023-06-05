@@ -10,17 +10,6 @@ body h1,h2,h3,h4,h5,p,span{
   font-family: cu;
 }
 
-header {
-
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #243851;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    z-index: 999;
-}
-
 .cabecalho {
   max-width: 1200px;
   margin: 0 auto;
