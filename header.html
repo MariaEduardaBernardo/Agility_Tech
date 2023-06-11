@@ -1,4 +1,8 @@
 <!-- Conteúdo do header -->
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
         <img src="https://uploaddeimagens.com.br/images/004/457/464/full/imagem_2023-05-08_113702062.png?1683556624" height="45" alt="Icone do projeto">
@@ -20,24 +24,23 @@
               <li><a class="dropdown-item" href="#">Voluntário</a></li>
             </ul>
           </li>
-          <li class="nav-item dropdown">
+          <li class="nav-item dropdown" id="accountDropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Entrar na conta
             </a>
             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="/HTML/AcessoUser.html">Cadastrar</a></li>
-                                <li><a class="dropdown-item" href="/HTML/AcessoUser.html">Login</a></li>
-                            </ul>
-                        </li>
+              <li id="registerOption"><a class="dropdown-item" href="/HTML/AcessoUser.html">Cadastrar</a></li>
+              <li><a class="dropdown-item" href="/HTML/AcessoUser.html">Login</a></li>
+            </ul>
+          </li>
 
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </nav>
+        </ul>
+      </div>
+    </div>
+</nav>
 
-    <!-- Sscripts do Bootstrap -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
-</body>
+<!-- Scripts do Bootstrap -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
 
-</html>
+
+
