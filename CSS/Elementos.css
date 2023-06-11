@@ -347,11 +347,9 @@ right: 10px;
   float: left;
 }
 
-.inf_user section {
-  margin-bottom: 1rem;
+.inf_user {
   background-color: #f2f2f2;
   padding: 1rem;
-  border-radius: 1.5%;
 }
 
 .inf_user h2 {
@@ -402,7 +400,6 @@ right: 10px;
   list-style:circle;
   padding: 0;
 }
-
 
 
 /*card ong*/
@@ -505,6 +502,8 @@ right: 10px;
     overflow: hidden;
   }
 
+  /*Passar a página caso houver preenchido toda a página*/
+
   .pagination {
     display: flex;
     justify-content: center;
@@ -536,8 +535,7 @@ right: 10px;
   }
 
 
-  /* Pop-up */
-
+/* Pop-up do checklist */
 
 .modal {
   display: none;
@@ -553,7 +551,7 @@ right: 10px;
 
 .escolha_checklist {
   background-color: #ffffff;
-  margin: 10% auto;
+  margin: 2% auto;
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
@@ -655,3 +653,54 @@ right: 10px;
   background-color: #16a085;
 }
 
+/*Pagina usuario*/
+main {
+  padding: 5rem 1rem 5rem 0;
+  }
+
+  .inf_user {
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+  margin-top: 2em;
+  }
+
+  .sidebar {
+
+  width: 50%;
+  margin-right: 1em;
+  }
+
+  .inf_user section {
+  margin-bottom: 1rem;
+  background-color: #f2f2f2;
+  padding: 1rem;
+  }
+
+  #imagem{
+    max-height: 20em;
+    min-height: 12em;
+    border-radius: 360px;
+  }
+
+  #usuario{
+    background: none;
+  }
+
+  #usuario button{
+    background-color: #1abc9c;
+    color: #ffffff;
+    padding: 0.2rem 3rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 0.2em;
+    width: 90%;
+  }
+
+  #usuario button:hover{
+    cursor: pointer;
+    background-color: #16a085;
+  }

@@ -134,8 +134,8 @@
         <!--Login da ong-->
         <div class="form-container sign-in-container">
             <form action="/Usuario.html" id="FormCadastro">
-                <h1>Login de ONG</h1>
-                <span>É um Voluntário? <a href="/HTML/AcessoONG.html">Entrar como Voluntário</a></span><br>
+                <h1>Login de Voluntário</h1>
+                <span>É uma ONG? <a href="/HTML/AcessoONG.html">Entrar como ONG</a></span><br>
 
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
@@ -186,3 +186,43 @@
 </body>
 
 </html>
+
+
+<script>/*
+    // Verificar o estado de autenticação ao carregar a página
+    window.addEventListener('DOMContentLoaded', () => {
+      // Adicionar listener para o evento onAuthStateChanged
+      firebase.auth().onAuthStateChanged((user) => {
+        if (user) {
+          // O usuário está autenticado
+          console.log('Usuário autenticado:', user.email);
+
+          // Exibir o email do usuário
+          let userEmailElement = document.getElementById("userEmail");
+          userEmailElement.textContent = user.email;
+
+          let userNameElement = document.getElementById("userName");
+          userNameElement.textContent = "Olá, " + user.displayName;
+        } else {
+          // O usuário não está autenticado, redirecionar para a página "teste.html"
+          window.location.href = "/AcessoUser.html";
+        }
+      })
+    });
+
+    // Obtém uma referência para o botão de sair
+var signOutButton = document.getElementById('signOutButton');
+
+// Adiciona um ouvinte de evento para o clique no botão
+signOutButton.addEventListener('click', function() {
+  firebase.auth().signOut().then(function() {
+    // O usuário foi desautenticado com sucesso
+    console.log('Usuário desautenticado');
+    // Redirecione ou faça outras ações necessárias após o logout
+  }).catch(function(error) {
+    // Ocorreu um erro ao desautenticar o usuário
+    console.error('Erro ao desautenticar usuário:', error);
+  });
+});
+*/
+</script>
