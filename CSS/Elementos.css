@@ -682,7 +682,8 @@ main {
   #imagem{
     max-height: 20em;
     min-height: 12em;
-    border-radius: 360px;
+    border-radius: 1rem;
+    margin-bottom: 1.5em;
   }
 
   #usuario{
