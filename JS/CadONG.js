@@ -97,7 +97,7 @@ const firebaseConfig = {
       let greetingElement = document.getElementById("greeting");
       greetingElement.textContent = "Bem-vindo, " + user.email + "!";
 
-
+b
     } else {
       // O usuário não está autenticado
       console.log('Usuário não autenticado');
