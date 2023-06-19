@@ -67,8 +67,8 @@ submitButton.addEventListener("click", (e) => {
         });
     });
 
-  // alert
-  alert("Resposta enviada!");
+    var toast = new bootstrap.Toast(document.getElementById("liveToast"));
+    toast.show();
 
   // clear form after submission
   function clearForm() {
@@ -111,8 +111,7 @@ loginButton.addEventListener("click", (e) => {
     // Authentication successful
     const user = userCredential.user;
     console.log('Usuário autenticado:', user.email);
-    window.location.href = "index.html";
-
+    window.location.href = "Usuario.html";
   })
   .catch((error) => {
   // Authentication failed
@@ -121,28 +120,3 @@ loginButton.addEventListener("click", (e) => {
   });
 });
 
-
-// Sair da conta
-// Adicione um evento de clique ao botão de logout
-logoutButton.addEventListener("click", (e) => {
-  e.preventDefault();
-
-  // Execute o logout do usuário
-  auth.signOut()
-  .then(() => {
-
-    // Logout bem-sucedido
-    console.log('Usuário fez logout');
-    removePostElement();
-
-    window.location.href = "HTML/index.html";
-
-    // Oculte o contêiner após o logout
-    let post = document.querySelector(".post");
-    post.style.display = "none";
-  })
-  .catch((error) => {
-    // Ocorreu um erro durante o logout
-    console.log("Erro ao fazer logout:", error);
-  });
-});
