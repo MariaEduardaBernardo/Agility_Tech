@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/CSS/Login_cadastro.css">
     <link rel="stylesheet" href="/CSS/Principais.css">
     <link rel="stylesheet" href="/CSS/Elementos.css">
+
     <link rel="import" href="/Cadastro.java">
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
@@ -39,51 +40,77 @@
 
 <body>
 
+    <script>
+        // Função para remover o tooltip quando ocorre o clique no campo
+        function removeTooltip() {
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl);
+            });
+
+            tooltipList.forEach(function (tooltip) {
+                tooltip.hide();
+            });
+        }
+
+        // Adiciona o evento de clique para remover o tooltip
+        document.getElementById("idName").addEventListener("click", removeTooltip);
+    </script>
+
     <div class="container" id="container">
         <div class="form-container sign-up-container">
-            <form class="row g-3 needs-validation" id="clearFrom" novalidate>
-
+            <form id="clearFrom" class="was-validated needs-validation">
                 <h1>Realize seu cadastro</h1>
-                <span>Não é uma ONG? <a href="/HTML/AcessoUser.html">Entrar como Voluntário</a></span><br>
+                <span>Não é uma ONG? <a href="/AcessoUser.html">Entrar como Voluntário</a></span><br>
 
 
-                <form class="row g-3 needs-validation" novalidate>
-                    <div class="col">
-                        <label for="userName">Nome</label>
-                        <input type="text" id="validationCustom01" required>
-                        <div class="invalid-feedback">Por favor, digite seu nome</div>
+                <label for="idName" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="idName" name="userName" required>
+                <div class="invalid-feedback">O nome deve ter no minimo 4 caracteres e não pode conter números.</div>
+
+                <label for="email">Email:</label>
+                <input type="email" id="idEmail" name="userEmail" class="form-control" required>
+
+                <label for="idPw" class="form-label">Senha</label>
+                <input type="password" class="form-control" id="idPw" name="password" minlength="8" maxlength="20"
+                    required>
+                <div class="invalid-feedback">A senha deve ter entre 8 a 20 caracteres e incluir uma combinação de
+                    letras maiúsculas, minúsculas, números e caracteres especiais</div>
+
+                <p id="password-message"></p>
+                <div class="col" id="termos-btn">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                        <label class="form-check-label" for="invalidCheck">
+                            Eu concordo com os <a href="#" id="termos-link">Termos de Uso</a>
+
+                        </label>
                     </div>
+                </div>
+                <style>
+                    .form-check input {
+                        width: 1em;
+                        height: 1em;
+                        margin: 0 0.5em 0 0;
+                    }
+                </style>
 
-                    <div class="col">
-                        <label for="userEmail">E-mail</label>
-                        <input type="email" id="validationCustom03" required>
-                        <div class="invalid-feedback">
-                            Por favor, digite um e-mail válido
+
+                <div id="liveToastBtn"><button type="button" class="btn btn-primary" id="submit">Cadastrar</button>
+                </div>
+                <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                        <div class="toast-header">
+                            <img src="https://uploaddeimagens.com.br/images/004/457/464/full/imagem_2023-05-08_113702062.png?1683556624"
+                                height="30" alt="Icone do sistema">
+                            <strong class="me-auto">Força do bem</strong>
+                        </div>
+                        <div class="toast-body">
+                            Seu cadastro foi efetuado com sucesso!! Para acessar sua conta, faça seu login.
                         </div>
                     </div>
-
-                    <div class="col">
-                        <label for="validationCustom05" class="form-label">Senha</label>
-                        <input type="password" id="validationCustom05" required>
-                        <div class="invalid-feedback">
-                            Sua senha precisa conter de 8-20 caracteres com letras maiuscula, minuscla, numero e
-                            caracteres especiais (#,@,$ etc)
-                        </div>
-                    </div>
-                    <div class="col" id="termos-btn">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                            <label class="form-check-label" for="invalidCheck">
-                                Eu concordo com os <a href="#" data-bs-toggle="modal"
-                                    data-bs-target="#exampleModal">Termos de
-                                    Uso</a>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <button class="btn btn-primary" type="submit">Cadastrar</button>
-                    </div>
-                </form>
+                </div>
+            </form>
         </div>
 
         <!-- Modal -->
@@ -130,12 +157,16 @@
             </div>
         </div>
 
+        <script>
+            const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+            const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+        </script>
 
         <!--Login da ong-->
         <div class="form-container sign-in-container">
             <form action="/Usuario.html" id="FormCadastro">
-                <h1>Login de ONG</h1>
-                <span>É um Voluntário? <a href="/HTML/AcessoONG.html">Entrar como Voluntário</a></span><br>
+                <h1>Login para ONG</h1>
+                <span>É um Voluntário? <a href="/AcessoUser.html">Entrar como Voluntário</a></span><br>
 
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
@@ -181,8 +212,55 @@
             height: 1em;
         }
     </style>
-    <script src="/JS/Cad_log.js"></script>
+    <script>
+        document.getElementById("termos-link").addEventListener("click", function (event) {
+            event.preventDefault(); // Evita o comportamento padrão do link
+
+            // Exibe o modal
+            var modal = document.getElementById("exampleModal");
+            var modalInstance = new bootstrap.Modal(modal);
+            modalInstance.show();
+        });
+    </script>
+
+    <script>
+        document.getElementById("clearFrom").addEventListener("submit", function (event) {
+            event.preventDefault(); // Evita o envio padrão do formulário
+
+
+            var toast = new bootstrap.Toast(document.getElementById("liveToast"));
+            toast.show();
+        });
+
+    </script>
+
+    <script>
+        const toastTrigger = document.getElementById('liveToastBtn')
+        const toastLiveExample = document.getElementById('liveToast')
+
+        if (toastTrigger) {
+            const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+            toastTrigger.addEventListener('click', () => {
+                toastBootstrap.show()
+            })
+        }
+    </script>
+
+
     <script src="/JS/CadUser.js"></script>
+    <script src="/JS/Cad_log.js"></script>
+    <script src="/JS/script.js"></script>
+
 </body>
 
 </html>
+
+<style>
+    #submit{
+      margin-bottom: 2em;
+    }
+
+    .modal-footer button{
+        margin: 0 0.1em 0 0;
+    }
+  </style>
